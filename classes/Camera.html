@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Bugz Modding API</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Bugz</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Player.html">Player</a></li>
+  <li><a href="../classes/Enemy.html">Enemy</a></li>
+  <li><a href="../classes/Rect.html">Rect</a></li>
+  <li><a href="../classes/Vec2.html">Vec2</a></li>
+  <li><a href="../classes/Color.html">Color</a></li>
+  <li><a href="../classes/PlayerData.html">PlayerData</a></li>
+  <li><a href="../classes/TexAsset.html">TexAsset</a></li>
+  <li><a href="../classes/SfxAsset.html">SfxAsset</a></li>
+  <li><a href="../classes/Font.html">Font</a></li>
+  <li><strong>Camera</strong></li>
+  <li><a href="../classes/MusicData.html">MusicData</a></li>
+  <li><a href="../classes/MusicAsset.html">MusicAsset</a></li>
+  <li><a href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+  <li><a href="../classes/MapObject.html">MapObject</a></li>
+  <li><a href="../classes/MapAsset.html">MapAsset</a></li>
+  <li><a href="../classes/EnemyData.html">EnemyData</a></li>
+  <li><a href="../classes/AreaData.html">AreaData</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/tables.html">tables</a></li>
+  <li><a href="../modules/screen.html">screen</a></li>
+  <li><a href="../modules/os.html">os</a></li>
+  <li><a href="../modules/entity.html">entity</a></li>
+  <li><a href="../modules/shop.html">shop</a></li>
+  <li><a href="../modules/level.html">level</a></li>
+  <li><a href="../modules/ai.html">ai</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/01-hooks.md.html">01-hooks</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>Camera</code></h1>
+<p>Stores the camera.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#camera.default">camera.default ()</a></td>
+	<td class="summary">Gets the default camera.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#camera:scale">camera:scale ()</a></td>
+	<td class="summary">Gets the scale of the camera.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#camera:offset">camera:offset ()</a></td>
+	<td class="summary">Gets the offset of the camera.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#camera:transition_scale">camera:transition_scale ()</a></td>
+	<td class="summary">Gets the offset of the camera post transition</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#camera:transition_offset">camera:transition_offset ()</a></td>
+	<td class="summary">Gets the offset of the camera post transition</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "camera.default"></a>
+    <strong>camera.default ()</strong>
+    </dt>
+    <dd>
+    Gets the default camera.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Camera.html#">Camera</a></span>
+        The default camera.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "camera:scale"></a>
+    <strong>camera:scale ()</strong>
+    </dt>
+    <dd>
+    Gets the scale of the camera.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float32</span></span>
+        the scale
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/Camera.html#camera:offset">camera:offset</a></li>
+         <li><a href="../classes/Camera.html#camera:transition_scale">camera:transition_scale</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "camera:offset"></a>
+    <strong>camera:offset ()</strong>
+    </dt>
+    <dd>
+    Gets the offset of the camera.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vec2.html#">Vec2</a></span>
+        offset
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/Camera.html#camera:scale">camera:scale</a></li>
+         <li><a href="../classes/Camera.html#camera:transition_offset">camera:transition_offset</a></li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">cam = Camera.<span class="function-name">default</span>()
+rect = Rect.<span class="function-name">new</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="number">20</span>)
+
+<span class="comment">-- convert the rect to screen space
+</span>rect = rect:<span class="function-name">scale</span>(cam:<span class="function-name">scale</span>()):<span class="function-name">offset</span>(cam:<span class="function-name">offset</span>())</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "camera:transition_scale"></a>
+    <strong>camera:transition_scale ()</strong>
+    </dt>
+    <dd>
+    Gets the offset of the camera post transition
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float32</span></span>
+        the scale
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/Camera.html#camera:transition_offset">camera:transition_offset</a></li>
+         <li><a href="../classes/Camera.html#camera:scale">camera:scale</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "camera:transition_offset"></a>
+    <strong>camera:transition_offset ()</strong>
+    </dt>
+    <dd>
+    Gets the offset of the camera post transition
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vec2.html#">Vec2</a></span>
+        offset
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/Camera.html#camera:transition_scale">camera:transition_scale</a></li>
+         <li><a href="../classes/Camera.html#camera:offset">camera:offset</a></li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">cam = Camera.<span class="function-name">default</span>()
+rect = Rect.<span class="function-name">new</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="number">20</span>)
+
+<span class="comment">-- convert the rect to screen space
+</span>rect = rect:<span class="function-name">scale</span>(cam:<span class="function-name">transition_scale</span>()):<span class="function-name">offset</span>(cam:<span class="function-name">transition_offset</span>())</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-05-22 12:25:23 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

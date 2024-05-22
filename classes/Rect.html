@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Bugz Modding API</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Bugz</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Player.html">Player</a></li>
+  <li><a href="../classes/Enemy.html">Enemy</a></li>
+  <li><strong>Rect</strong></li>
+  <li><a href="../classes/Vec2.html">Vec2</a></li>
+  <li><a href="../classes/Color.html">Color</a></li>
+  <li><a href="../classes/PlayerData.html">PlayerData</a></li>
+  <li><a href="../classes/TexAsset.html">TexAsset</a></li>
+  <li><a href="../classes/SfxAsset.html">SfxAsset</a></li>
+  <li><a href="../classes/Font.html">Font</a></li>
+  <li><a href="../classes/Camera.html">Camera</a></li>
+  <li><a href="../classes/MusicData.html">MusicData</a></li>
+  <li><a href="../classes/MusicAsset.html">MusicAsset</a></li>
+  <li><a href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+  <li><a href="../classes/MapObject.html">MapObject</a></li>
+  <li><a href="../classes/MapAsset.html">MapAsset</a></li>
+  <li><a href="../classes/EnemyData.html">EnemyData</a></li>
+  <li><a href="../classes/AreaData.html">AreaData</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/tables.html">tables</a></li>
+  <li><a href="../modules/screen.html">screen</a></li>
+  <li><a href="../modules/os.html">os</a></li>
+  <li><a href="../modules/entity.html">entity</a></li>
+  <li><a href="../modules/shop.html">shop</a></li>
+  <li><a href="../modules/level.html">level</a></li>
+  <li><a href="../modules/ai.html">ai</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/01-hooks.md.html">01-hooks</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>Rect</code></h1>
+<p>A rectangle</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Rect.new">Rect.new (x, y, width, height)</a></td>
+	<td class="summary">Creates a new rectangle.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Rect.x">Rect.x</a></td>
+	<td class="summary">The x of the rectangle</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rect.y">Rect.y</a></td>
+	<td class="summary">The y of the rectangle</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rect.width">Rect.width</a></td>
+	<td class="summary">The width of the rectangle</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rect.height">Rect.height</a></td>
+	<td class="summary">The height of the rectangle</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Rect:contains">Rect:contains (vec)</a></td>
+	<td class="summary">Checks if a rect contains a point.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rect:collide">Rect:collide (targ, vel, dt)</a></td>
+	<td class="summary">Collides a rect with walls in the current level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rect:center">Rect:center ()</a></td>
+	<td class="summary">Gets the center point of a rectangle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rect:offset">Rect:offset (offset)</a></td>
+	<td class="summary">Adds a value to the location of a Rect.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rect:to_screenspace">Rect:to_screenspace ()</a></td>
+	<td class="summary">Converts a world space Rect to screen space</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "Rect.new"></a>
+    <strong>Rect.new (x, y, width, height)</strong>
+    </dt>
+    <dd>
+    Creates a new rectangle.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">float</span></span>
+        the x position
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">float</span></span>
+        the y position
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">float</span></span>
+        the width
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">float</span></span>
+        the height
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Rect.html#">Rect</a></span>
+        the new rectangle
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Rect.x"></a>
+    <strong>Rect.x</strong>
+    </dt>
+    <dd>
+    The x of the rectangle
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Rect.y"></a>
+    <strong>Rect.y</strong>
+    </dt>
+    <dd>
+    The y of the rectangle
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Rect.width"></a>
+    <strong>Rect.width</strong>
+    </dt>
+    <dd>
+    The width of the rectangle
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Rect.height"></a>
+    <strong>Rect.height</strong>
+    </dt>
+    <dd>
+    The height of the rectangle
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Rect:contains"></a>
+    <strong>Rect:contains (vec)</strong>
+    </dt>
+    <dd>
+    Checks if a rect contains a point.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">vec</span>
+            <span class="types"><a class="type" href="../classes/Vec2.html#">Vec2</a></span>
+        the Vector to check
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        true if the Vector is in the Rect
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Rect:collide"></a>
+    <strong>Rect:collide (targ, vel, dt)</strong>
+    </dt>
+    <dd>
+    Collides a rect with walls in the current level.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">targ</span>
+            <span class="types"><span class="type">integer</span></span>
+        the collisions to interact with
+        </li>
+        <li><span class="parameter">vel</span>
+            <span class="types"><a class="type" href="../classes/Vec2.html#">Vec2</a></span>
+        the initial velocity of the Rect.
+        </li>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">float</span></span>
+        the time step.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vec2.html#">Vec2</a></span>
+        the new velocity
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/tables.html#collision">tables.collision</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">rect = Rect.<span class="function-name">new</span>(<span class="number">20</span>, <span class="number">20</span>, <span class="number">1</span>, <span class="number">1</span>)
+vel = Vec2.<span class="function-name">new</span>(<span class="number">5</span>, <span class="number">5</span>)
+vel = rect:<span class="function-name">collide</span>(collision.entity, vel, dt)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Rect:center"></a>
+    <strong>Rect:center ()</strong>
+    </dt>
+    <dd>
+    Gets the center point of a rectangle.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vec2.html#">Vec2</a></span>
+        the center
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Rect:offset"></a>
+    <strong>Rect:offset (offset)</strong>
+    </dt>
+    <dd>
+    Adds a value to the location of a Rect.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offset</span>
+            <span class="types"><a class="type" href="../classes/Vec2.html#">Vec2</a></span>
+        the offset to add
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Rect.html#">Rect</a></span>
+        the new rectangle
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Rect:to_screenspace"></a>
+    <strong>Rect:to_screenspace ()</strong>
+    </dt>
+    <dd>
+    Converts a world space Rect to screen space
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Rect.html#">Rect</a></span>
+        the new rectangle in screen space
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-05-22 12:25:23 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

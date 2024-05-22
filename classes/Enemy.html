@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Bugz Modding API</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Bugz</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Fields">Fields</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Player.html">Player</a></li>
+  <li><strong>Enemy</strong></li>
+  <li><a href="../classes/Rect.html">Rect</a></li>
+  <li><a href="../classes/Vec2.html">Vec2</a></li>
+  <li><a href="../classes/Color.html">Color</a></li>
+  <li><a href="../classes/PlayerData.html">PlayerData</a></li>
+  <li><a href="../classes/TexAsset.html">TexAsset</a></li>
+  <li><a href="../classes/SfxAsset.html">SfxAsset</a></li>
+  <li><a href="../classes/Font.html">Font</a></li>
+  <li><a href="../classes/Camera.html">Camera</a></li>
+  <li><a href="../classes/MusicData.html">MusicData</a></li>
+  <li><a href="../classes/MusicAsset.html">MusicAsset</a></li>
+  <li><a href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+  <li><a href="../classes/MapObject.html">MapObject</a></li>
+  <li><a href="../classes/MapAsset.html">MapAsset</a></li>
+  <li><a href="../classes/EnemyData.html">EnemyData</a></li>
+  <li><a href="../classes/AreaData.html">AreaData</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/tables.html">tables</a></li>
+  <li><a href="../modules/screen.html">screen</a></li>
+  <li><a href="../modules/os.html">os</a></li>
+  <li><a href="../modules/entity.html">entity</a></li>
+  <li><a href="../modules/shop.html">shop</a></li>
+  <li><a href="../modules/level.html">level</a></li>
+  <li><a href="../modules/ai.html">ai</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/01-hooks.md.html">01-hooks</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>Enemy</code></h1>
+<p>A Player reference</p>
+<p></p>
+
+
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Enemy.hp">Enemy.hp</a></td>
+	<td class="summary">The enemies hp value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy.max_hp">Enemy.max_hp</a></td>
+	<td class="summary">The enemies maximum hp value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy.active">Enemy.active</a></td>
+	<td class="summary">true if the enemy is being updated every frame.</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Enemy:get_hitboxes">Enemy:get_hitboxes ()</a></td>
+	<td class="summary">Gets the hitboxes of an enemy reference.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy:damage">Enemy:damage (dmg)</a></td>
+	<td class="summary">Damages an enemy.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy:effect">Enemy:effect (effect, adds)</a></td>
+	<td class="summary">Adds a value to an enemy Stat.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy:get_stat">Enemy:get_stat (effect)</a></td>
+	<td class="summary">Gets the value of an enemy Stat.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy:set_stat">Enemy:set_stat (effect, set)</a></td>
+	<td class="summary">Sets the value of an enemy Stat.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy:has_ai">Enemy:has_ai (effect)</a></td>
+	<td class="summary">Returns true if the enemy has the AI property.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Enemy:add_anger">Enemy:add_anger (anger)</a></td>
+	<td class="summary">Increases the enemies anger stat.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Enemy.hp"></a>
+    <strong>Enemy.hp</strong>
+    </dt>
+    <dd>
+    The enemies hp value.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Enemy.max_hp"></a>
+    <strong>Enemy.max_hp</strong>
+    </dt>
+    <dd>
+    The enemies maximum hp value.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Enemy.active"></a>
+    <strong>Enemy.active</strong>
+    </dt>
+    <dd>
+    true if the enemy is being updated every frame.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Enemy:get_hitboxes"></a>
+    <strong>Enemy:get_hitboxes ()</strong>
+    </dt>
+    <dd>
+    Gets the hitboxes of an enemy reference.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Rect.html#">Rect[]</a></span>
+        A list of all the hitboxes (world space)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Enemy:damage"></a>
+    <strong>Enemy:damage (dmg)</strong>
+    </dt>
+    <dd>
+    Damages an enemy.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dmg</span>
+            <span class="types"><span class="type">float</span></span>
+        The ammount of damage to apply.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Enemy:effect"></a>
+    <strong>Enemy:effect (effect, adds)</strong>
+    </dt>
+    <dd>
+    Adds a value to an enemy Stat.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">effect</span>
+            <span class="types"><span class="type">integer</span></span>
+        The effect id to add
+        </li>
+        <li><span class="parameter">adds</span>
+            <span class="types"><span class="type">float</span></span>
+        The ammount of the effect to add
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/tables.html#enemy_stat">tables.enemy_stat</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "Enemy:get_stat"></a>
+    <strong>Enemy:get_stat (effect)</strong>
+    </dt>
+    <dd>
+    Gets the value of an enemy Stat.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">effect</span>
+            <span class="types"><span class="type">integer</span></span>
+        The effect id to add
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float</span></span>
+        The value of the effect
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/tables.html#enemy_stat">tables.enemy_stat</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "Enemy:set_stat"></a>
+    <strong>Enemy:set_stat (effect, set)</strong>
+    </dt>
+    <dd>
+    Sets the value of an enemy Stat.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">effect</span>
+            <span class="types"><span class="type">integer</span></span>
+        The effect id to add
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">float</span></span>
+        The new value for the stat
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/tables.html#enemy_stat">tables.enemy_stat</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "Enemy:has_ai"></a>
+    <strong>Enemy:has_ai (effect)</strong>
+    </dt>
+    <dd>
+    Returns true if the enemy has the AI property.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">effect</span>
+            <span class="types"><span class="type">integer</span></span>
+        The AI property id to check
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        true if the enemy has the property
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Enemy:add_anger"></a>
+    <strong>Enemy:add_anger (anger)</strong>
+    </dt>
+    <dd>
+    Increases the enemies anger stat.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">anger</span>
+            <span class="types"><span class="type">float</span></span>
+        The ammount of anger to add
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-05-22 12:25:23 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

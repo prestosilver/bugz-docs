@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Bugz Modding API</title>
+    <link rel="stylesheet" href="ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Bugz</h1>
+
+
+
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="modules/tables.html">tables</a></li>
+  <li><a href="modules/screen.html">screen</a></li>
+  <li><a href="modules/os.html">os</a></li>
+  <li><a href="modules/entity.html">entity</a></li>
+  <li><a href="modules/shop.html">shop</a></li>
+  <li><a href="modules/level.html">level</a></li>
+  <li><a href="modules/ai.html">ai</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="classes/Player.html">Player</a></li>
+  <li><a href="classes/Enemy.html">Enemy</a></li>
+  <li><a href="classes/Rect.html">Rect</a></li>
+  <li><a href="classes/Vec2.html">Vec2</a></li>
+  <li><a href="classes/Color.html">Color</a></li>
+  <li><a href="classes/PlayerData.html">PlayerData</a></li>
+  <li><a href="classes/TexAsset.html">TexAsset</a></li>
+  <li><a href="classes/SfxAsset.html">SfxAsset</a></li>
+  <li><a href="classes/Font.html">Font</a></li>
+  <li><a href="classes/Camera.html">Camera</a></li>
+  <li><a href="classes/MusicData.html">MusicData</a></li>
+  <li><a href="classes/MusicAsset.html">MusicAsset</a></li>
+  <li><a href="classes/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="classes/Sprite.html">Sprite</a></li>
+  <li><a href="classes/MapObject.html">MapObject</a></li>
+  <li><a href="classes/MapAsset.html">MapAsset</a></li>
+  <li><a href="classes/EnemyData.html">EnemyData</a></li>
+  <li><a href="classes/AreaData.html">AreaData</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="topics/01-hooks.md.html">01-hooks</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+
+  <h2>The API for Bugz Modding</h2>
+
+<h2>Modules</h2>
+<table class="module_list">
+	<tr>
+		<td class="name" nowrap><a href="modules/tables.html">tables</a></td>
+		<td class="summary">Stores some tables</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="modules/screen.html">screen</a></td>
+		<td class="summary">Stores some helper functions for the screen.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="modules/os.html">os</a></td>
+		<td class="summary">Stores something</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="modules/entity.html">entity</a></td>
+		<td class="summary">tools for managing entities.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="modules/shop.html">shop</a></td>
+		<td class="summary">A shop</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="modules/level.html">level</a></td>
+		<td class="summary">Tools for managing levels.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="modules/ai.html">ai</a></td>
+		<td class="summary">Ai utilities.</td>
+	</tr>
+</table>
+<h2>Classes</h2>
+<table class="module_list">
+	<tr>
+		<td class="name" nowrap><a href="classes/Player.html">Player</a></td>
+		<td class="summary">A Player reference</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/Enemy.html">Enemy</a></td>
+		<td class="summary">A Player reference</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/Rect.html">Rect</a></td>
+		<td class="summary">A rectangle</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/Vec2.html">Vec2</a></td>
+		<td class="summary">A x y coordinate</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/Color.html">Color</a></td>
+		<td class="summary">A color</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/PlayerData.html">PlayerData</a></td>
+		<td class="summary">Data required to create a player</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/TexAsset.html">TexAsset</a></td>
+		<td class="summary">Stores a texture.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/SfxAsset.html">SfxAsset</a></td>
+		<td class="summary">Stores a sound effect</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/Font.html">Font</a></td>
+		<td class="summary">Stores a font.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/Camera.html">Camera</a></td>
+		<td class="summary">Stores the camera.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/MusicData.html">MusicData</a></td>
+		<td class="summary">Stores music track data.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/MusicAsset.html">MusicAsset</a></td>
+		<td class="summary">Stores music track.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/SpriteSheet.html">SpriteSheet</a></td>
+		<td class="summary">Stores a sprite sheet.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/Sprite.html">Sprite</a></td>
+		<td class="summary">Stores a single sprite.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/MapObject.html">MapObject</a></td>
+		<td class="summary">Stores a map object.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/MapAsset.html">MapAsset</a></td>
+		<td class="summary">Stores a map.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/EnemyData.html">EnemyData</a></td>
+		<td class="summary">Stores enemy data for spawning enemies.</td>
+	</tr>
+	<tr>
+		<td class="name" nowrap><a href="classes/AreaData.html">AreaData</a></td>
+		<td class="summary">registers</td>
+	</tr>
+</table>
+<h2>Topics</h2>
+<table class="module_list">
+	<tr>
+		<td class="name" nowrap><a href="topics/01-hooks.md.html">01-hooks.md</a></td>
+		<td class="summary"></td>
+	</tr>
+</table>
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-05-22 12:25:23 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

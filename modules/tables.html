@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Bugz Modding API</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Bugz</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>tables</strong></li>
+  <li><a href="../modules/screen.html">screen</a></li>
+  <li><a href="../modules/os.html">os</a></li>
+  <li><a href="../modules/entity.html">entity</a></li>
+  <li><a href="../modules/shop.html">shop</a></li>
+  <li><a href="../modules/level.html">level</a></li>
+  <li><a href="../modules/ai.html">ai</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Player.html">Player</a></li>
+  <li><a href="../classes/Enemy.html">Enemy</a></li>
+  <li><a href="../classes/Rect.html">Rect</a></li>
+  <li><a href="../classes/Vec2.html">Vec2</a></li>
+  <li><a href="../classes/Color.html">Color</a></li>
+  <li><a href="../classes/PlayerData.html">PlayerData</a></li>
+  <li><a href="../classes/TexAsset.html">TexAsset</a></li>
+  <li><a href="../classes/SfxAsset.html">SfxAsset</a></li>
+  <li><a href="../classes/Font.html">Font</a></li>
+  <li><a href="../classes/Camera.html">Camera</a></li>
+  <li><a href="../classes/MusicData.html">MusicData</a></li>
+  <li><a href="../classes/MusicAsset.html">MusicAsset</a></li>
+  <li><a href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+  <li><a href="../classes/MapObject.html">MapObject</a></li>
+  <li><a href="../classes/MapAsset.html">MapAsset</a></li>
+  <li><a href="../classes/EnemyData.html">EnemyData</a></li>
+  <li><a href="../classes/AreaData.html">AreaData</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/01-hooks.md.html">01-hooks</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>tables</code></h1>
+<p>Stores some tables</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#builtin_shop">builtin_shop</a></td>
+	<td class="summary">Stores the ids of builtin shops.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#builtin_sheet">builtin_sheet</a></td>
+	<td class="summary">Stores the ids the builtin sprite sheets.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#builtin_sound">builtin_sound</a></td>
+	<td class="summary">Stores the ids of builtin sound effects.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#builtin_spawn_pattern">builtin_spawn_pattern</a></td>
+	<td class="summary">Stores the builtin spawn patterns.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#builtin_track">builtin_track</a></td>
+	<td class="summary">Stores the ids of builtin sound tracks.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#collision">collision</a></td>
+	<td class="summary">Stores the ids of collision types.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enemy_stat">enemy_stat</a></td>
+	<td class="summary">Stores the ids of Enemy stats.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#stat">stat</a></td>
+	<td class="summary">Stores the ids of Player stats.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#curse">curse</a></td>
+	<td class="summary">Stores the ids of Player curses</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#map_kind">map_kind</a></td>
+	<td class="summary">Stores the ids of map types.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#item_kind">item_kind</a></td>
+	<td class="summary">Stores the ids of shop item types.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#item_cost">item_cost</a></td>
+	<td class="summary">Stores the ids of shop cost types.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "builtin_shop"></a>
+    <strong>builtin_shop</strong>
+    </dt>
+    <dd>
+    Stores the ids of builtin shops.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">witch</span>
+        the witch shop
+        </li>
+        <li><span class="parameter">anvil</span>
+        the anvil shop
+        </li>
+        <li><span class="parameter">wardrobe</span>
+        the wardrobe shop
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "builtin_sheet"></a>
+    <strong>builtin_sheet</strong>
+    </dt>
+    <dd>
+    Stores the ids the builtin sprite sheets.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">sprites</span>
+        some basic sprites
+        </li>
+        <li><span class="parameter">misc</span>
+        misc sprites
+        </li>
+        <li><span class="parameter">big</span>
+        big sprites mostly for decor
+        </li>
+        <li><span class="parameter">icons</span>
+        icons
+        </li>
+        <li><span class="parameter">items</span>
+        item sprites
+        </li>
+        <li><span class="parameter">doors</span>
+        doors
+        </li>
+        <li><span class="parameter">shopKeeper</span>
+        shop keeper sprite
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "builtin_sound"></a>
+    <strong>builtin_sound</strong>
+    </dt>
+    <dd>
+    Stores the ids of builtin sound effects.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">noSound</span>
+        No sound effect
+        </li>
+        <li><span class="parameter">shoot</span>
+        shooting sound
+        </li>
+        <li><span class="parameter">fire</span>
+        flame thrower sound
+        </li>
+        <li><span class="parameter">bomb</span>
+        exploding arrow sound
+        </li>
+        <li><span class="parameter">wall</span>
+        arrow hitting a wall
+        </li>
+        <li><span class="parameter">splat</span>
+        avocado hitting a wall
+        </li>
+        <li><span class="parameter">playerDamage</span>
+        player taking damage
+        </li>
+        <li><span class="parameter">enemyDamage</span>
+        enemy taking damage
+        </li>
+        <li><span class="parameter">dash</span>
+        plays when a special is triggered
+        </li>
+        <li><span class="parameter">curse</span>
+        plays when a new curse level is hit
+        </li>
+        <li><span class="parameter">unlock</span>
+        plays on a mode unlock
+        </li>
+        <li><span class="parameter">pickup</span>
+        plays when you pickup an item
+        </li>
+        <li><span class="parameter">fall</span>
+        plays when you fall down a level
+        </li>
+        <li><span class="parameter">collect</span>
+        plays when you collect an item
+        </li>
+        <li><span class="parameter">playerDeath</span>
+        plays when the player dies
+        </li>
+        <li><span class="parameter">enemyDeath</span>
+        plays when an enemy dies
+        </li>
+        <li><span class="parameter">projectileBreak</span>
+        plays when an arrow breaks
+        </li>
+        <li><span class="parameter">bossDamage</span>
+        plays when the boss takes damage
+        </li>
+        <li><span class="parameter">bossPeck</span>
+        plays when the boss pecks
+        </li>
+        <li><span class="parameter">bossYell</span>
+        plays when the boss yells
+        </li>
+        <li><span class="parameter">bossLand</span>
+        plays when the boss lands
+        </li>
+        <li><span class="parameter">bossDeath</span>
+        plays when the boss dies
+        </li>
+        <li><span class="parameter">loot</span>
+        plays when a loot level changes on an entity
+        </li>
+        <li><span class="parameter">open</span>
+        plays when a loot succeeds
+        </li>
+        <li><span class="parameter">volume</span>
+        plays when the volume slider moves
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "builtin_spawn_pattern"></a>
+    <strong>builtin_spawn_pattern</strong>
+    </dt>
+    <dd>
+    Stores the builtin spawn patterns.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">room</span>
+        Spawns in packs one per room
+        </li>
+        <li><span class="parameter">hall</span>
+        Spawns in hallways
+        </li>
+        <li><span class="parameter">boss</span>
+        Spawns in the boss room
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/Enemy.html#">Enemy</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "builtin_track"></a>
+    <strong>builtin_track</strong>
+    </dt>
+    <dd>
+    Stores the ids of builtin sound tracks.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">area1</span>
+        area 1
+        </li>
+        <li><span class="parameter">area2</span>
+
+        </li>
+        <li><span class="parameter">area3</span>
+
+        </li>
+        <li><span class="parameter">area4</span>
+
+        </li>
+        <li><span class="parameter">area5</span>
+
+        </li>
+        <li><span class="parameter">title</span>
+        the Title screen track
+        </li>
+        <li><span class="parameter">lobby</span>
+        the lobby music
+        </li>
+        <li><span class="parameter">tutorial</span>
+        the tutorial music
+        </li>
+        <li><span class="parameter">boss</span>
+        the boss music
+        </li>
+        <li><span class="parameter">credits</span>
+        the credits music
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "collision"></a>
+    <strong>collision</strong>
+    </dt>
+    <dd>
+    Stores the ids of collision types.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+        enemies and the player
+        </li>
+        <li><span class="parameter">projectile</span>
+        projectiles
+        </li>
+        <li><span class="parameter">flying</span>
+        flying enemies or a flying player
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enemy_stat"></a>
+    <strong>enemy_stat</strong>
+    </dt>
+    <dd>
+    Stores the ids of Enemy stats.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">confused</span>
+        confuses the enemy
+        </li>
+        <li><span class="parameter">stone</span>
+        turns the enemy to stone
+        </li>
+        <li><span class="parameter">fire</span>
+        lights the enemy on fire
+        </li>
+        <li><span class="parameter">slow</span>
+        slows an enemy down
+        </li>
+        <li><span class="parameter">volt</span>
+        zaps an enemy
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/Enemy.html#">Enemy</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "stat"></a>
+    <strong>stat</strong>
+    </dt>
+    <dd>
+    Stores the ids of Player stats.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">arrows</span>
+
+        </li>
+        <li><span class="parameter">arrowSpeed</span>
+
+        </li>
+        <li><span class="parameter">luck</span>
+
+        </li>
+        <li><span class="parameter">magnet</span>
+
+        </li>
+        <li><span class="parameter">speed</span>
+
+        </li>
+        <li><span class="parameter">maxHp</span>
+
+        </li>
+        <li><span class="parameter">damage</span>
+
+        </li>
+        <li><span class="parameter">critMult</span>
+
+        </li>
+        <li><span class="parameter">exp</span>
+
+        </li>
+        <li><span class="parameter">curses</span>
+
+        </li>
+        <li><span class="parameter">coins</span>
+
+        </li>
+        <li><span class="parameter">diamonds</span>
+
+        </li>
+        <li><span class="parameter">diamondMult</span>
+
+        </li>
+        <li><span class="parameter">reload</span>
+
+        </li>
+        <li><span class="parameter">reroll</span>
+
+        </li>
+        <li><span class="parameter">thorns</span>
+
+        </li>
+        <li><span class="parameter">rerollAi</span>
+
+        </li>
+        <li><span class="parameter">immunity</span>
+
+        </li>
+        <li><span class="parameter">arrowLightRadius</span>
+
+        </li>
+        <li><span class="parameter">lightRadius</span>
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/Player.html#">Player</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "curse"></a>
+    <strong>curse</strong>
+    </dt>
+    <dd>
+    Stores the ids of Player curses
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">luckMult</span>
+
+        </li>
+        <li><span class="parameter">magnetMult</span>
+
+        </li>
+        <li><span class="parameter">speedMult</span>
+
+        </li>
+        <li><span class="parameter">damageMult</span>
+
+        </li>
+        <li><span class="parameter">expMult</span>
+
+        </li>
+        <li><span class="parameter">angerMult</span>
+
+        </li>
+        <li><span class="parameter">accuracy</span>
+
+        </li>
+        <li><span class="parameter">maxArrows</span>
+
+        </li>
+        <li><span class="parameter">aoeSize</span>
+
+        </li>
+        <li><span class="parameter">arrowMult</span>
+        increases arrows per shot
+        </li>
+        <li><span class="parameter">maze</span>
+        changes how complex levels are
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/Player.html#">Player</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "map_kind"></a>
+    <strong>map_kind</strong>
+    </dt>
+    <dd>
+    Stores the ids of map types.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">lobby</span>
+        The lobby
+        </li>
+        <li><span class="parameter">tutorial</span>
+        The tutorial stage
+        </li>
+        <li><span class="parameter">boss</span>
+        A boss stage
+        </li>
+        <li><span class="parameter">level</span>
+        A standard stage
+        </li>
+        <li><span class="parameter">modded</span>
+        A modded level
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "item_kind"></a>
+    <strong>item_kind</strong>
+    </dt>
+    <dd>
+    Stores the ids of shop item types.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">weapon</span>
+        A weapon
+        </li>
+        <li><span class="parameter">player</span>
+        A player
+        </li>
+        <li><span class="parameter">curse</span>
+        A curse
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/shop.html#">shop</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "item_cost"></a>
+    <strong>item_cost</strong>
+    </dt>
+    <dd>
+    Stores the ids of shop cost types.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">diamonds</span>
+        Diamond cost
+        </li>
+        <li><span class="parameter">souls</span>
+        Soul cost
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/shop.html#">shop</a>
+    </ul>
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-05-22 12:25:23 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

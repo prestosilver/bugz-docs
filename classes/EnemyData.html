@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Bugz Modding API</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Bugz</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Player.html">Player</a></li>
+  <li><a href="../classes/Enemy.html">Enemy</a></li>
+  <li><a href="../classes/Rect.html">Rect</a></li>
+  <li><a href="../classes/Vec2.html">Vec2</a></li>
+  <li><a href="../classes/Color.html">Color</a></li>
+  <li><a href="../classes/PlayerData.html">PlayerData</a></li>
+  <li><a href="../classes/TexAsset.html">TexAsset</a></li>
+  <li><a href="../classes/SfxAsset.html">SfxAsset</a></li>
+  <li><a href="../classes/Font.html">Font</a></li>
+  <li><a href="../classes/Camera.html">Camera</a></li>
+  <li><a href="../classes/MusicData.html">MusicData</a></li>
+  <li><a href="../classes/MusicAsset.html">MusicAsset</a></li>
+  <li><a href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+  <li><a href="../classes/MapObject.html">MapObject</a></li>
+  <li><a href="../classes/MapAsset.html">MapAsset</a></li>
+  <li><strong>EnemyData</strong></li>
+  <li><a href="../classes/AreaData.html">AreaData</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/tables.html">tables</a></li>
+  <li><a href="../modules/screen.html">screen</a></li>
+  <li><a href="../modules/os.html">os</a></li>
+  <li><a href="../modules/entity.html">entity</a></li>
+  <li><a href="../modules/shop.html">shop</a></li>
+  <li><a href="../modules/level.html">level</a></li>
+  <li><a href="../modules/ai.html">ai</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/01-hooks.md.html">01-hooks</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>EnemyData</code></h1>
+<p>Stores enemy data for spawning enemies.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData.new">EnemyData.new (name)</a></td>
+	<td class="summary">Creates a new enemy data object.</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData:add_ai">EnemyData:add_ai (ai)</a></td>
+	<td class="summary">Adds an ai behaviour to an enemy type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData:set_segments">EnemyData:set_segments (length)</a></td>
+	<td class="summary">Sets the length of an enemy type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData:set_hp">EnemyData:set_hp (length)</a></td>
+	<td class="summary">Sets the hp of an enemy type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData:set_pack_size">EnemyData:set_pack_size (pack)</a></td>
+	<td class="summary">Sets the size of a pack of the enemy type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData:set_speed">EnemyData:set_speed (pack)</a></td>
+	<td class="summary">Sets the speed of an enemy type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData:set_spawn">EnemyData:set_spawn (pattern)</a></td>
+	<td class="summary">Sets the spawn type of an enemy type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EnemyData:register">EnemyData:register ()</a></td>
+	<td class="summary">registers an enemy data object as spawnable.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "EnemyData.new"></a>
+    <strong>EnemyData.new (name)</strong>
+    </dt>
+    <dd>
+    Creates a new enemy data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+        The name of the enemy
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/EnemyData.html#">EnemyData</a></span>
+        The new enemy data object
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "EnemyData:add_ai"></a>
+    <strong>EnemyData:add_ai (ai)</strong>
+    </dt>
+    <dd>
+    Adds an ai behaviour to an enemy type.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ai</span>
+            <span class="types"><span class="type">integer</span></span>
+        The ai behaviour
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ai.html#">ai</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "EnemyData:set_segments"></a>
+    <strong>EnemyData:set_segments (length)</strong>
+    </dt>
+    <dd>
+    Sets the length of an enemy type.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">length</span>
+            <span class="types"><span class="type">integer</span></span>
+        The new length of the enemy
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "EnemyData:set_hp"></a>
+    <strong>EnemyData:set_hp (length)</strong>
+    </dt>
+    <dd>
+    Sets the hp of an enemy type.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">length</span>
+            <span class="types"><span class="type">float</span></span>
+        The new hp of the enemy.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "EnemyData:set_pack_size"></a>
+    <strong>EnemyData:set_pack_size (pack)</strong>
+    </dt>
+    <dd>
+    Sets the size of a pack of the enemy type.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pack</span>
+            <span class="types"><span class="type">integer</span></span>
+        The new size of a pack.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "EnemyData:set_speed"></a>
+    <strong>EnemyData:set_speed (pack)</strong>
+    </dt>
+    <dd>
+    Sets the speed of an enemy type.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pack</span>
+            <span class="types"><span class="type">float</span></span>
+        The new speed of a pack.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "EnemyData:set_spawn"></a>
+    <strong>EnemyData:set_spawn (pattern)</strong>
+    </dt>
+    <dd>
+    Sets the spawn type of an enemy type.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pattern</span>
+            <span class="types"><span class="type">integer</span></span>
+        The new spawn pattern.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/tables.html#builtin_spawn_pattern">tables.builtin_spawn_pattern</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "EnemyData:register"></a>
+    <strong>EnemyData:register ()</strong>
+    </dt>
+    <dd>
+    registers an enemy data object as spawnable.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span></span>
+        The id of the newly registered enemy type.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-05-22 12:25:23 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
